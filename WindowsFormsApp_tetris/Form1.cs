@@ -28,7 +28,7 @@ namespace WindowsFormsApp_tetris
             this.Height = (int)Math.Round(mat.GetLength(0) * recSizeY * 1.1);
 
             FillMat();
-            GenerateShape();
+            GenerateShapes();
 
             GameUpdateTimer.Start();
         }
@@ -75,8 +75,18 @@ namespace WindowsFormsApp_tetris
         private void GenerateShapes()
         {
             //Square:
-            int[,] shape1h = new int[,] { { 1,1} }
-            Shape shape1 = new Shape()
+            int[,] shape1h = new int[,] { {0,0,0,0 },{0,1,1,0 },{0,1,1,0 },{0,0,0,0 } };
+            Shape shape1 = new Shape(shape1h);
+            //Line:
+            int[,] shape2h = new int[,] { {0,1,0,0 }, { 0, 1, 0, 0 }, { 0, 1, 0, 0 }, { 0, 1, 0, 0 } };
+            int[,] shape2r1 = new int[,] { {0,0,0,0 }, { 1, 1, 1, 1 } , { 0, 0, 0, 0 } , { 0, 0, 0, 0 } };
+            Shape shape2 = new Shape(shape2h, shape2r1);
+            //T Shape:
+            int[,] shape3h = new int[,] { { 0, 1, 0, 0 }, { 1, 1, 1, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
+            int[,] shape3r1 = new int[,] { { 0, 1, 0, 0 }, { 0, 1, 1, 0 }, { 0, 1, 0, 0 }, { 0, 0, 0, 0 } };
+            int[,] shape3r2 = new int[,] { { 0, 0, 0, 0 }, { 1, 1, 1, 0 }, { 0, 1, 0, 0 }, { 0, 0, 0, 0 } };
+            int[,] shape3r3 = new int[,] { { 0, 1, 0, 0 }, { 1, 1, 0, 0 }, { 0, 1, 0, 0 }, { 0, 0, 0, 0 } };
+            Shape Shape3 = new Shape(shape3h, shape3r1, shape3r2, shape3r3);
 
         }
     }
