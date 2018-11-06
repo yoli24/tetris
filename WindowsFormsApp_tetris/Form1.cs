@@ -86,8 +86,14 @@ namespace WindowsFormsApp_tetris
             int[,] shape3r1 = new int[,] { { 0, 1, 0, 0 }, { 0, 1, 1, 0 }, { 0, 1, 0, 0 }, { 0, 0, 0, 0 } };
             int[,] shape3r2 = new int[,] { { 0, 0, 0, 0 }, { 1, 1, 1, 0 }, { 0, 1, 0, 0 }, { 0, 0, 0, 0 } };
             int[,] shape3r3 = new int[,] { { 0, 1, 0, 0 }, { 1, 1, 0, 0 }, { 0, 1, 0, 0 }, { 0, 0, 0, 0 } };
-            Shape Shape3 = new Shape(shape3h, shape3r1, shape3r2, shape3r3);
-
+            Shape shape3 = new Shape(shape3h, shape3r1, shape3r2, shape3r3);
+            //Stairs1:
+            int[,] shape4h = new int[,] { { 0, 0, 0, 0 }, { 1, 1, 0, 0 }, { 0, 1, 1, 0 }, { 0, 0, 0, 0 } };
+            int[,] shape4r1 = new int[,] { { 0, 1, 0, 0 }, { 1, 1, 0, 0 }, { 1, 0, 0, 0 }, { 0, 0, 0, 0 } };
+            Shape shape4 = new Shape(shape4h, shape4r1);
+            //Stairs2:
+            int[,] shape5h = new int[,] { { 0, 0, 0, 0 }, { 0, 1, 1, 0 }, { 1, 1, 0, 0 }, { 0, 0, 0, 0 } };
+            int[,] shape5r1 = new int[,]{ { 0, 1, 0, 0 }, { 0, 1, 1, 0 }, { 0, 0, 1, 0 }, { 0, 0, 0, 0 } }; 
         }
     }
 }
