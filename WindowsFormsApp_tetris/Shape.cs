@@ -8,19 +8,32 @@ namespace WindowsFormsApp_tetris
 {
     class Shape
     {
+        //test;
         private int[,] horizontal;
         private int[,] rotation1;
         private int[,] rotation2;
         private int[,] rotation3;
         public int state;
         public int rotationsCount;
+        public void Rotate()
+        {
+            if (rotationsCount > state + 1)
+            {
+                state++;
+            }
+        }
         public int[,] GetShape()
         {
             switch (state)
             {
+                case 1:
+                    return rotation1;
+                case 2:
+                    return rotation2;
+                case 3:
+                    return rotation3;
                 default:
-                  return horizontal;
-
+                    return horizontal;
             }
         }
         public Shape(int[,] horizontal, int[,] rotation1, int[,] rotation2, int[,] rotation3)

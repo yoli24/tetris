@@ -72,22 +72,12 @@ namespace WindowsFormsApp_tetris
             myBrush.Dispose();
             formGraphics.Dispose();
         }
-        private void GenerateShape()
+        private void GenerateShapes()
         {
-            Random rnd = new Random();
-            List<int[,]> shapes = new List<int[,]>();
-            int[,] shape1 = new int[,] { { 1, 1 },
-                { 1, 1 } }; //square
-            int[,] shape2 = new int[,] { { 1, 1 },
-                { 0, 1 },
-                { 0, 1 } };
-            int[,] shape3 = new int[,] { { 1, 0 },
-                {1,1 },
-                {0,1} };
-            shapes.Add(shape1);
-            shapes.Add(shape2);
-            shapes.Add(shape3);
-            currentShape = shapes[rnd.Next(shapes.Count)];
+            //Square:
+            int[,] shape1h = new int[,] { { 1,1} }
+            Shape shape1 = new Shape()
+
         }
     }
 }
